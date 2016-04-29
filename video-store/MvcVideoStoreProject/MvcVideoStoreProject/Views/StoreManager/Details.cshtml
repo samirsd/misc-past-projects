@@ -1,0 +1,41 @@
+﻿@model MvcVideoStoreProject.Models.Product
+
+@{
+    ViewBag.Title = "Product - " + Model.Title;
+ }
+<h2>@Model.Title</h2>
+<p>
+    <img alt="@Model.Title"
+src="@Model.ProductArtUrl" />
+</p>
+<div id="product-details">
+    
+    <p>
+        <em>Title:</em>
+        @Model.Title
+    </p>
+    <p>
+        <em>Genre:</em>
+        @Model.Genre.Name
+    </p>
+    <p>
+        <em>Producer:</em>
+        @Model.Producer.Name
+    </p>
+    <p>
+        <em>Image URL:</em>
+        @Model.ProductArtUrl
+    </p>
+    <p>
+        <em>ProductType:</em>
+        @Model.ProductType.Name
+    </p>
+    <p>
+        <em>Format:</em>
+        @Model.Format.Name
+
+    </p>
+    <p class="button">
+        @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = Model.ProductId }, "")
+    </p>
+</div>

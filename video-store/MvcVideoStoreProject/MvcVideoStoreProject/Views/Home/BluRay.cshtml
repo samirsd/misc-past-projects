@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MvcVideoStoreProject.Models.Product>
+
+@{
+    ViewBag.Title = "BluRay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>BluRay</h2>
+
+
+@*<ul>
+    @foreach (var blurays in  Model)
+    {
+        <li>
+            @blurays.Title
+        </li>
+    }
+</ul>*@
+
+
+<article id="content">
+            <section class="half" id="left">
+                <h2>SPECIALS</h2>
+                <ul class="catalog">
+                    
+                @foreach (var product in Model)
+                {
+                    <li>
+                        
+                            
+                       <a href='@Url.Action("Details", "Home", new {title = product.Title})'><img src="@Url.Content(@product.ProductArtUrl)" class="small_movie" /></a>
+                        @*<br />*@
+                        <a href="#"><span id="add">+ </span><span id="link">Add to Cart</span></a>
+
+                    </li>
+                }
+                        
+                </ul>
+            </section>
+            <br />
+            <section class="half" id="right">
+                <h2>RECOMMENDATIONS</h2>
+                <ul class="catalog">
+                    
+                @foreach (var product in Model)
+                {
+                    <li>
+                        
+                            
+                       <a href='@Url.Action("Details", "Home", new {title = product.Title})'><img src="@Url.Content(@product.ProductArtUrl)" class="small_movie" /></a>
+                        @*<br />*@
+                        <a href="#"><span id="add">+ </span><span id="link">Add to Cart</span></a>
+
+                    </li>
+                }
+                </ul>
+            </section>
+        </article>
+
+
+
+

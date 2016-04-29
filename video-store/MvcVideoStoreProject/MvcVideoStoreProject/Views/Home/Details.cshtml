@@ -1,0 +1,67 @@
+﻿@model MvcVideoStoreProject.Models.Product
+@{
+    ViewBag.Title = "Details";
+}
+
+<body>
+    </header>
+         
+    <article id="content">
+            <section class="half" id="single">
+            	
+                <h2>@Model.Title</h2>
+
+                
+        
+                <img src="@Url.Content(@Model.ProductArtUrl)"/>
+                <div class="third"><div id="description">
+       			<p>Movie description goes here</p></div>
+                <br />
+                <p>rate:</p><div class="rating">
+<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+</div><br /><br/>
+                <li><a href="#"><a href="#"><span id="add">+ </span><span id="link">Add to Cart</span></a></li>
+                <li><a href="#"><a href="#"><span id="add">+ </span><span id="link">Add to Wishlist</span></a></li>
+
+                </div>
+                <div class="third">
+       			<p><strong>Actors:<br /><br />
+                 Producers: @Model.Producer.Name<br /><br />
+                 Length: <br /><br />
+                 Format: @Model.Format.Name<br /><br />
+                 Tags: @Model.Genre.Name <br /><br />
+                </strong></p>
+                </div>
+                </section>
+          	<section class="half" id="reviews">
+            <h2> REVIEWS </h2>
+            	<div class="third">
+            		<h3>Review 1</h3><div class="rating">
+<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+</div><br /><br />
+                    	<p>I loved it!</p>
+                        </div>
+               <div class="third">
+            		<h3>Review 2</h3><div class="rating">
+<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+</div><br /><br />
+                    	<p>Meh</p>
+                        </div>
+                <div class="third">
+            		<h3>Review 3</h3><div class="rating">
+<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+</div><br /><br />
+                    	<p>Worst. movie. ever.</p>
+                        </div>
+                <li><a href="#"><a href="#"><span id="add">+ </span><span id="link">Add a review</span></a></li>
+           </article>
+    </div>
+    <footer>
+</footer>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+
+@*added stuff for shopping cart*@
+ 

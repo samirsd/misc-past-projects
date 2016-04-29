@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+#main_navigation li a:hover {
+	background-color: #000;
+	color: #336699;
+	}	
+	
+.third{
+		line-height: 100%;}
+#description {
+	overflow: hidden;
+	height: 320px;}
+ .change_button {
+	 margin-top: 0px;
+ }

@@ -1,0 +1,108 @@
+   def totalvalue(comb):
+        # ' Totalise a particular combination of items'
+        totwt = totval = 0
+        for item, weight, value in comb:
+            totwt += weight
+            totval += value
+        return (totval, -totwt) if totwt <= 400 else (0, 0)
+
+    bagged = dp_knapsack(items, capacity, weight, value)
+    value, weight = totalvalue(bagged)
+
+    print("for a total value of %i and a total weight of %i" % (value, -weight))
+
+
+I
+    # list.sort(key=lambda x: x.value // x.weight, reverse = True)
+
+    # for i in value_densities:
+    #     i.index = value_densities.index(i)
+    # print value_densities
+    #     # for item in items:
+
+    #     taken[item.index] = 1
+    #     weights.append(item.weight)
+    #     values.append(item.value)
+
+    # print "values: ", values
+
+
+    # for i in range(len(items)):
+    #     # print float((items[i].value))/float((items[i].weight))
+
+    #     # print "value",(items[i].value)
+    #     value_densities.append(float((items[i].value))/float((items[i].weight)))
+    # # print "vd:  ",value_densities
+
+    # sorted_vds = quicksort(value_densities,0,len(value_densities)-1)
+    # print sorted_vds
+
+
+
+    # for i in range(len(items)):
+    #     # if items[i].value is max(values) and (weight + items[i].weight <= capacity):
+    #     if  weight + items[i].weight <= capacity and (items[i].value is max(values)):
+    #         value += items[i+1].value
+    #         weight += items[i+1].weight
+    #         taken[i] = 1
+
+
+
+
+    #         # print "max", max(values)
+    #         # print "weight", weight
+    #         # print "capacity", capacity
+    #         # print "value" , value
+    #         # 219380 0
+    #         # 1012574 0
+    #         values.remove(max(values))
+
+    #         # print values
+
+    #     print "max value: ", max(values)
+    #     values.remove(max(values))
+    # else:
+    #     print "done"
+
+
+    # value += item.value
+    # weight += item.weight
+
+    # print "min weight: ", min(weights)
+    # print "max value: ", max(values)
+
+
+
+    # # prepare the solution in the specified output format
+    # output_data = str(value) + ' ' + str(0) + '\n'
+    # output_data += ' '.join(map(str, taken))
+    # return output_data
+
+
+    # def _linear_relaxation(j, cp, cw, ordered):
+    #     # we consider how well we can do to increase our current profit (cp)
+    #     # by looking at items beyond the item that we either just took or left behind
+    #
+    #     weight = cw
+    #     value = cp
+    #
+    #     for (v, w), index in ordered:
+    #         if index > j:
+    #
+    #             if w + weight <= capacity:
+    #                 value  += v
+    #                 weight += w
+    #             else:
+    #                 return value + (v * (capacity - weight)/float(w))
+    #
+    #     return value
+
+
+    value_densities = []
+
+    # print "items: ", items
+    # print "weights: ", weights
+    # print "values: ", values
+    # list.sort(key=lambda x: x.value // x.weight, reverse=True)
+
+    # value_densities = sorted(list)
